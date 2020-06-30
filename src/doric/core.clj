@@ -5,7 +5,7 @@
 (defn- title-case-word [w]
   (if (zero? (count w))
     w
-    (str (Character/toTitleCase (first w))
+    (str (Character/toTitleCase ^java.lang.Character (first w))
          (subs w 1))))
 
 (defn title-case [s]

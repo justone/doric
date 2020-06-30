@@ -10,7 +10,7 @@
 (defn render [table]
   (let [spacer (str "|-"
                     (join "-+-"
-                          (map #(apply str (repeat (.length %) "-"))
+                          (map #(apply str (repeat (.length ^java.lang.String %) "-"))
                                (first table)))
                     "-|")]
     (concat [spacer
